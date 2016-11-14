@@ -24,7 +24,8 @@ Consider these naming convenctions hard requirements.
 * Following a blank line, put third-party headers like `<boost/filesystem.hpp>`, `<vtkPoint.h>`, `<opencv2/core.hpp>`
 * Lastly, put any project-specific includes: `"common/types/Volume.h"`, `"meshing/OrderedResampling.h"`
 * These three groups should be separated by blank lines. A sample header section should look similar to the following:
-```
+
+```[cxx]
 #include <iostream>
 #include <memory>
 #include <vector>
@@ -36,6 +37,7 @@ Consider these naming convenctions hard requirements.
 #include "common/types/Volume.h"
 #include "meshing/OrderedResampling.h"
 ```
+
 * System and third-party headers should be enclosed in `<>`. Project headers should be enclosed in `""`. This _does_ make a difference to the compiler.
 
 ### Best Practices
