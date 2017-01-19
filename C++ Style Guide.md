@@ -4,7 +4,7 @@ Seales Research C++ Style Guide
 These are some simple rules to follow during C++ development of the Volume Cartographer project.
 
 ### Naming Conventions
-Consider these naming convenctions hard requirements.
+Consider these naming conventions hard requirements.
 
 * `lowerCamelCase` for local variables, member functions
 * `UpperCamelCase` for:
@@ -12,17 +12,18 @@ Consider these naming convenctions hard requirements.
     * using-declarations
     * `enum`s and `enum class`s
     * `static` functions and member functions
-* `_memberVar`: lowerCamelCase'd leading underscore for member variables
+* `memberVar_`: lowerCamelCase'd trailing underscore for member variables
+* `member_function_()`: lower case, trailing underscore for member functions
 * `SCREAMING_SNAKE_CASE` for any `#define`'s, `const static`, `const`, or `constexpr` member variables
 * File names should be UpperCamelCase and be named after the class they define/declare or after the functionality they contain
-    * For class `UVMap` the header and source file should be named UVMap.h and UVMap.cpp, respectively
-    * For a file contianing some helper functions, it should be named something like Util.h/Util.cpp. Use your best judgement here
+    * For class `UVMap` the header and source file should be named UVMap.hpp and UVMap.cpp, respectively
+    * For a file contianing some helper functions, it should be named something like Util.hpp/Util.cpp. Use your best judgement here
 
 ### Organization
 #### Headers
 * Put system-level headers first - things like `<iostreams`, `<memory>`, and `<vector>`
 * Following a blank line, put third-party headers like `<boost/filesystem.hpp>`, `<vtkPoint.h>`, `<opencv2/core.hpp>`
-* Lastly, put any project-specific includes: `"common/types/Volume.h"`, `"meshing/OrderedResampling.h"`
+* Lastly, put any project-specific includes: `"core/types/Volume.hpp"`, `"meshing/OrderedResampling.hpp"`
 * These three groups should be separated by blank lines. A sample header section should look similar to the following:
 
 ```[cxx]
@@ -34,8 +35,8 @@ Consider these naming convenctions hard requirements.
 #include <vtkPoint.h>
 #include <opencv2/core.hpp>
 
-#include "common/types/Volume.h"
-#include "meshing/OrderedResampling.h"
+#include "core/types/Volume.hpp"
+#include "meshing/OrderedResampling.hpp"
 ```
 
 * System and third-party headers should be enclosed in `<>`. Project headers should be enclosed in `""`. This _does_ make a difference to the compiler.
