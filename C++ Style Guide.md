@@ -12,8 +12,8 @@ Consider these naming conventions hard requirements.
     * using-declarations
     * `enum`s and `enum class`s
     * `static` functions and member functions
-* `memberVar_`: lowerCamelCase'd trailing underscore for member variables
-* `member_function_()`: lower case, trailing underscore for member functions
+* `memberVar_`: lowerCamelCase'd trailing underscore for private member variables
+* `member_function_()`: lower case, trailing underscore for private member functions
 * `SCREAMING_SNAKE_CASE` for any `#define`'s, `const static`, `const`, or `constexpr` member variables
 * File names should be UpperCamelCase and be named after the class they define/declare or after the functionality they contain
     * For class `UVMap` the header and source file should be named UVMap.hpp and UVMap.cpp, respectively
