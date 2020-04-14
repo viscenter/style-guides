@@ -102,6 +102,8 @@ Foo::Foo() {};
 
 ### Include It Where You Use It (IIWYUI)
 Only include header files in those places where those headers are actually used.
+If a header could be included in both the `.hpp` and `.cpp` for a class,
+only include it in the `.hpp` file.
 Consider the following two files which define the interface and implementation
 for class `Foo`:
 
